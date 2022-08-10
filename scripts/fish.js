@@ -62,6 +62,7 @@ class Fish {
     _update() {
         //move
         if (this.pos_x > this.CANVAS.width + 50 || this.pos_x < -100) {
+            this.pos_y = Math.random() * (this.CANVAS.height - 50) + 10;
             this.SPEED *= -1;
         }
         this.pos_x += this.SPEED;
